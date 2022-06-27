@@ -1,0 +1,42 @@
+sudo apt-get update -y
+sudo apt-get upgrade -y
+
+ssh-keygen -y
+
+
+// GIT
+
+apt-get install git
+
+//  MYSQL
+
+sudo apt update -Y
+sudo apt install mysql-server
+sudo systemctl start mysql.service
+
+
+// MONGODB
+
+wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+sudo apt-get install gnupg
+wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+
+sudo touch /etc/apt/sources.list.d/mongodb-org-5.0.list
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+sudo apt-get update -Y
+sudo apt-get install -y mongodb-org
+sudo systemctl start mongod
+
+// MONGODB COMPASS
+
+wget https://downloads.mongodb.com/compass/mongodb-compass_1.32.2_amd64.deb
+sudo dpkg -i mongodb-compass_1.32.2_amd64.deb
+
+// POSTMAN
+sudo snap install postman
+
+// VS CODE
+sudo apt install software-properties-common apt-transport-https wget
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo apt install code
+
