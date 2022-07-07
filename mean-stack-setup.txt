@@ -10,7 +10,7 @@ sudo apt-get install git -y
 
 //  MYSQL
 
-sudo apt update -Y
+sudo apt update -y
 sudo apt install mysql-server
 sudo systemctl start mysql.service
 
