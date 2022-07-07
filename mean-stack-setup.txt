@@ -6,7 +6,7 @@ ssh-keygen -y
 
 // GIT
 
-apt-get install git
+sudo apt-get install git -y
 
 //  MYSQL
 
